@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: [
            const SearchSection(), 
            SizedBox(height: 24.h),
-          const Expanded(child:  ResultsSection()),
+          const Flexible(child:  ResultsSection()),
           ],
         ),
       ),

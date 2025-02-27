@@ -67,6 +67,10 @@ class ResultsSection extends StatelessWidget {
                   itemCount: state.newsList1.length,
                 ),
               if (state.newsList2.isNotEmpty)
+        if (state.newsList2.isNotEmpty)
+ const SliverToBoxAdapter(
+    child: Divider(thickness: 2),
+  ),
                 SliverList.builder(
                   itemBuilder:
                       (context, index) =>  InkWell(
