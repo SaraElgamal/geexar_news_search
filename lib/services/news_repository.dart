@@ -12,6 +12,8 @@ class NewsRepository {
 
     final response = await apiService.get(NewsEndPoints.everyThing, params: {
       "q": keyword,
+      NewsEndPoints.sortBy: 'publishedAt',
+      NewsEndPoints.pageSize: 10,
       NewsEndPoints.apiKey: AppConsts.apiKey, 
     });
 
@@ -26,8 +28,10 @@ class NewsRepository {
 
 
   Future<List<NewsModel>> fetchCategoryNews(String category) async {
-    final response = await apiService.get(NewsEndPoints.topHeadlines, params: {
-      NewsEndPoints.category: category,
+    final response = await apiService.get(NewsEndPoints.everyThing, params: {
+      "q": category,
+      NewsEndPoints.sortBy: 'relevancy',
+      NewsEndPoints.pageSize: 10,
       NewsEndPoints.apiKey: AppConsts.apiKey,
     });
 

@@ -35,7 +35,7 @@ class _SearchSectionState extends State<SearchSection> {
       children: [
         defaultTextFormField(
           context,
-          label: 'Key1',
+          label: 'search',
           keyboardType: TextInputType.text,
          prefix: const Icon(AppIcons.article,color: AppColors.darkGrey,),
           controller: keyword1Controller,
@@ -45,7 +45,7 @@ class _SearchSectionState extends State<SearchSection> {
 
           suffix: const Icon(AppIcons.search,color: AppColors.darkGrey,),
 
-          onChanged: (value) {
+          onEditingComplete: () {
               if (keyword1Controller.text.isNotEmpty) {
                   context.read<NewsCubit>().fetchNews(keyword1Controller.text);
                 }
@@ -54,7 +54,7 @@ class _SearchSectionState extends State<SearchSection> {
         SizedBox(height: 16.h),
         defaultTextFormField(
           context,
-          label: 'key2',
+          label: 'search another topic',
           controller: keyword2Controller,
           keyboardType: TextInputType.text,
           prefix: const Icon(AppIcons.newsPaper, color: AppColors.darkGrey,),
@@ -64,7 +64,7 @@ class _SearchSectionState extends State<SearchSection> {
 
           suffix: const Icon(AppIcons.search,color: AppColors.darkGrey,),
 
-          onChanged: (value) {
+          onEditingComplete: () {
              if (keyword2Controller.text.isNotEmpty) {
                   context.read<NewsCubit>().fetchCategoryNews(keyword2Controller.text);
                 }

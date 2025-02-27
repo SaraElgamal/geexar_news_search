@@ -21,7 +21,7 @@ class NewsListItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
           
-            if (news.imageUrl != null) ImageLoader(imageUrl: news.imageUrl),
+            if (news.urlToImage != null) ImageLoader(imageUrl: news.urlToImage),
              SizedBox(height: 8.h),
             Text(news.title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
              SizedBox(height: 4.h),
@@ -33,5 +33,8 @@ class NewsListItem extends StatelessWidget {
       ),
     );
   }
+
+
+
 }
 

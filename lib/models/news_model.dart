@@ -1,26 +1,27 @@
-class NewsModel {
+import 'package:equatable/equatable.dart';
+
+class NewsModel extends Equatable {
   final String title;
   final String description;
-  final String url;
-  final String? imageUrl;
-  final String category;
+  final String? urlToImage;
+   final String source;
 
-  NewsModel({
+  const NewsModel({
     required this.title,
     required this.description,
-    required this.url,
-     required this.category,
-    this.imageUrl,
-
+    required this.urlToImage,
+   required this.source,
   });
 
   factory NewsModel.fromJson(Map<String, dynamic> json) {
     return NewsModel(
       title: json['title'] ?? 'No Title',
       description: json['description'] ?? 'No Description',
-      url: json['url'] ?? '',
-      category: json['category'] ?? 'general',
-      imageUrl: json['urlToImage'],
+      urlToImage: json['urlToImage'] ?? '',
+      source: json['source']['name'] ?? 'Unknown',
     );
   }
+
+  @override
+  List<Object?> get props => [title, description, urlToImage,source];
 }

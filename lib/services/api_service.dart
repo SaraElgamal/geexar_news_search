@@ -14,6 +14,7 @@ class ApiService {
     try {
       final response = await _dio.get(endpoint, queryParameters: params);
       return response;
+     
     } on DioException catch (e) {
      throw Exception("API Error: ${e.response?.statusCode ?? 'Unknown'}");
     }

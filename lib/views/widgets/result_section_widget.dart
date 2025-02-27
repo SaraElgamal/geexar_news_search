@@ -52,23 +52,34 @@ class ResultsSection extends StatelessWidget {
         } else if (state is NewsLoaded) {
           return CustomScrollView(
             slivers: [
-               
-
-             if (state.newsList1.isNotEmpty)
-               
-              SliverList.builder(
-                itemBuilder: 
-                  (context, index) => NewsListItem( state.newsList1[index]),
+              if (state.newsList1.isNotEmpty)
+                SliverList.builder(
+                  itemBuilder:
+                      (context, index) => InkWell(
+                        onTap: () {
+                          context.read<NewsCubit>().updateListBySource(
+                            state.newsList1[index].source,
+                            true,
+                          );
+                        },
+                        child: NewsListItem(state.newsList1[index]),
+                      ),
                   itemCount: state.newsList1.length,
                 ),
               if (state.newsList2.isNotEmpty)
-            
-              SliverList.builder(
-                itemBuilder: 
-                  (context, index) => NewsListItem( state.newsList2[index]),
+                SliverList.builder(
+                  itemBuilder:
+                      (context, index) =>  InkWell(
+                        onTap: () {
+                          context.read<NewsCubit>().updateListBySource(
+                            state.newsList1[index].source,
+                            false,
+                          );
+                        },
+                        child:  NewsListItem(state.newsList2[index]),
+                      ),
                   itemCount: state.newsList2.length,
                 ),
-              
             ],
           );
         } else if (state is NewsError) {

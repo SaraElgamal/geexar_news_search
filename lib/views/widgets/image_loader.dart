@@ -51,7 +51,7 @@ class ImageLoader extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      color: AppColors.darkGrey,
+      color: Colors.grey[200],
       child: const Icon(AppIcons.errorImage, color: AppColors.red, size: 50),
     );
   }
