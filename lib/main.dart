@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geexar/core/DI/service_locator.dart' as di;
 import 'package:geexar/viewModels/cubit.dart';
-import 'package:geexar/viewModels/states.dart';
 import 'package:geexar/views/home_screen.dart';
 
 void main() {
- // debugRepaintRainbowEnabled = true;
    di.init();
    WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());

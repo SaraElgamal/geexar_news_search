@@ -38,7 +38,7 @@ Widget defaultTextFormField(context,
       decoration: InputDecoration(
         focusColor: AppColors.primaryColor,
         enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(30.r),
             borderSide: const BorderSide(
               color: Colors.grey,
               style: BorderStyle.solid,
@@ -46,7 +46,7 @@ Widget defaultTextFormField(context,
 
             )),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(30.r),
             borderSide: const  BorderSide(
               color: AppColors.primaryColor,
               style: BorderStyle.solid,
@@ -55,7 +55,7 @@ Widget defaultTextFormField(context,
 
             )) ,
         errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(30.r),
             borderSide: const BorderSide(
               color: AppColors.red,
               style: BorderStyle.solid,
@@ -73,7 +73,7 @@ Widget defaultTextFormField(context,
 
           borderSide: const BorderSide(color: Colors.grey,),
 
-          borderRadius: BorderRadius.circular(8.r),
+          borderRadius: BorderRadius.circular(30.r),
         ),
 
         hintText: hint,

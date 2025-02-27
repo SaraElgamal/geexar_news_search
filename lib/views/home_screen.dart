@@ -12,18 +12,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title:  Text('News Search' , style: AppFonts.style14normal,)),
-      body:   SingleChildScrollView( 
-        child: Padding(
-          padding:  EdgeInsets.all(16.0.h),
-          child:  Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-             const SearchSection(), 
-             SizedBox(height: 24.h),
-             const ResultsSection(),
-            ],
-          ),
+        title:  Text('News Search' , style: AppFonts.style16Bold,)),
+      body:   Padding(
+        padding:  EdgeInsets.all(16.0.h),
+        child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+           const SearchSection(), 
+           SizedBox(height: 24.h),
+          const Expanded(child:  ResultsSection()),
+          ],
         ),
       ),
     );

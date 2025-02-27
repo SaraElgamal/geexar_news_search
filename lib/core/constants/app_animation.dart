@@ -1,6 +1,6 @@
 
 class AppAnimation {
 
-  static const  doneSuccessfully = 'assets/animation/done.json';
+  static const  loader = 'assets/animation/loader.json';
  
 }
