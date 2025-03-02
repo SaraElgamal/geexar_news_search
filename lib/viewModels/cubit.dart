@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geexar/models/news_model.dart';
-import 'package:geexar/services/news_repository.dart';
+import 'package:geexar/repositories/news_repository.dart';
 import 'package:geexar/viewModels/states.dart';
 
 class NewsCubit extends Cubit<NewsState> {

@@ -1,7 +1,7 @@
 import 'package:geexar/core/constants/app_consts.dart';
 import 'package:geexar/models/news_model.dart';
-import 'package:geexar/services/api_service.dart';
-import 'package:geexar/services/end_points.dart';
+import 'package:geexar/core/services/api_service.dart';
+import 'package:geexar/core/services/end_points.dart';
 
 class NewsRepository {
   final ApiService apiService;
